@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+#install some basic components
+sudo dnf in -y vim-default-editor gnome-tweaks gnome-extensions-app gnome-shell-extension-caffeine wine geary
+
