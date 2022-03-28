@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+
+while true
+do
+    echo "What OS u wanna use?"
+    echo "[1]Fedora, [2]Arch"
+    read -p "distro [Default :1] " distro
+    distro=${distro: -1}
+    case $distro in
+        [1])
+	echo "[Fedora]"
+        echo "Installing My Fedora Basic Apps..."
+		sudo dnf update -y
+        sudo dnf in -y vim-default-editor gnome-tweaks gnome-extensions-app gnome-shell-extension-caffeine wine geary
+		clear
+		echo "What Default Editor Wanna Use?"
+		echo "[1]VIM, [2]NVIM"
+		read -p "Default Editor [Default :1] " editor
+		editor=${editor: -1}
+		case $editor in
+			[1])
+				echo "[You choose VIM as default Editor]"
+				echo "Installing Apps and Config..."
+				curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+					https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+				break;;
+
+			[2])
+				echo "[You choose NeoVIM as default Editor]"
+				echo "Installing Apps and Config..."
+				sudo dnf in -y neovim
+				clear
+
+				echo "what Plugin Manager Wanna Use?"
+				echo "[1]Packer VIM(Lua),[2]VIM-Plug"
+				read -p "NVIM Plugin Manager [default :1]" plugMan
+				plugMan=${plugMan: -1}
+				case $plugMan in
+					[1])
+						echo "[You Choose Packer]"
+						echo "Installing Packer and config..."
+						break;;
+					[2])
+						echo "[You Choose VIM-Plug"
+						echo "Installing VIM-Plug and config..."
+							sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+									https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+							
+						break;;
+				esac
+			break;;
+			*)
+			echo "false"
+			break;;
+		esac
+
+        break;;
+
+    [2])
+        echo "2"
+        break;;
+    *)
+        echo "false"
+        break;;
+    esac
+done

@@ -19,9 +19,9 @@ if [ -d "$xampp" ]; then
 		source ~/.zshrc
 	
 	else
-                echo "alias xampp='sudo opt/lampp/lampp'
-                      alias mysql='opt/lampp/bin/mysql'">> ~/.bashrc
-                source ~/.bashrc  	
+		echo "alias xampp='sudo opt/lampp/lampp'
+				alias mysql='opt/lampp/bin/mysql'">> ~/.bashrc
+		source ~/.bashrc  	
 	fi
 
 	
