@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+xampp="/opt/lampp/"
+fish="/usr/bin/fish"
+zsh="~/.zshrc"
+if [ -d "$xampp" ]; then
+	### Take action if $DIR exists ###
+  
+	if [ -d "$fish" ]; then
+		alias xampp='sudo opt/lampp/lampp'
+                alias mysql='opt/lampp/bin/mysql'
+		funcsave xampp
+		funcsave mysql
+		echo "xampp & mysql alias has been created!"
+	
+	else [ -f "$zsh" ]; then		
+		echo "alias xampp='sudo opt/lampp/lampp'
+		      alias mysql='opt/lampp/bin/mysql'">> ~/.zshrc
+		source ~/.zshrc
+	
+	else
+                echo "alias xampp='sudo opt/lampp/lampp'
+                      alias mysql='opt/lampp/bin/mysql'">> ~/.bashrc
+                source ~/.bashrc  	
+	fi
+
+	
+fi
