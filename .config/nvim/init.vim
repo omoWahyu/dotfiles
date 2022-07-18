@@ -23,14 +23,13 @@ set autoindent		"
 set laststatus=2	" Status Line always Active
 set background=dark
 set expandtab
-set hidden " you can change buffers without saving
-set modifiable
 
 " incremental substitution (neovim)
 if has('nvim')
   set inccommand=split
 endif
 
+set ttimeoutlen=0  " make Esc work faster
 
 set nosc noru nosm
 " Don't redraw while executing macros (good performance config)
