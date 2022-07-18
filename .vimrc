@@ -18,6 +18,9 @@ Plug 'neoclide/coc.nvim', {'do': './install.sh'}
 " Or build from source code by using yarn: https://yarnpkg.com
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
+" add this line to your .vimrc file
+Plug 'mattn/emmet-vim'
+
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree'
 
@@ -75,6 +78,7 @@ set showmatch " show matching brackets
 set laststatus=2 " always show the status line, vim 1, neovim 2
 set ttimeoutlen=0  " make Esc work faster
 set ttyfast " i have a fast terminal
+set autoread " make vim monitor realtime changes to a file
 
 " }}}
 " ----------------------------------------------------------------------------

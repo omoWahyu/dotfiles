@@ -1,103 +1,66 @@
-:set number
-:set relativenumber
-:set autoindent
-:set tabstop=4
-:set shiftwidth=4
-:set smarttab
-:set softtabstop=4
-:set mouse=a
+" Fundamentals "{{{
+" -------------------------------------------------------------------------------------------------
 
-call plug#begin()
+" init autocmd
+autocmd!
+" set script encoding
+scriptencoding utf-8
+" stop loading config if it's on tiny or small
+if !1 | finish | endif
 
-Plug 'tpope/vim-surround' " Surrounding ysw)
-Plug 'tpope/vim-commentary' " For Commenting gcc & gc
-Plug 'vim-airline/vim-airline' " Status bar
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ap/vim-css-color' " CSS Color Preview
-Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'neoclide/coc.nvim'  " Auto Completion
-Plug 'ryanoasis/vim-devicons' " Developer Icons
-Plug 'akinsho/toggleterm.nvim' " NVIM Split terminal
-Plug 'preservim/tagbar' " Tagbar for code navigation
-Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+set nocompatible
+set t_Co=256		" set terminal 256 color
 
-" NERDTree
-Plug 'preservim/nerdtree' " NerdTree
-Plug 'PhilRunninger/nerdtree-visual-selection' " 
-Plug 'Xuyuanp/nerdtree-git-plugin' " Show Git Status
-Plug 'ryanoasis/vim-devicons' " Icon
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight' 
-call plug#end()
+syntax enable
+set encoding=UTF-8
 
-" ToggleTerm
-nmap <C-t> :ToggleTerm<CR>
+set title
+set showcmd
+set mouse=a		" Enabled Mouse Selection
+set number		" Enabled line number on selected line
+set relativenumber	" Enabled line numbering
+set autoindent		"
+set laststatus=2	" Status Line always Active
+set background=dark
+set expandtab
+set hidden " you can change buffers without saving
+set modifiable
 
-" TagbarToggle
-nmap <F8> :TagbarToggle<CR>
-
-:set completeopt-=preview " For No Previews
-
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
-
-" --- Just Some Notes ---
-" :PlugClean :PlugInstall :UpdateRemotePlugins
-"
-" :CocInstall coc-python
-" :CocInstall coc-clangd
-" :CocInstall coc-snippets
-" :CocCommand snippets.edit... FOR EACH FILE TYPE
-
-" Sidebar [NERDTree]
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-b> :NERDTreeToggle<CR>
-nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
-
-" NerdTree-Visual-Toggle
-let g:nerdtree_vis_confirm_open
-let g:nerdtree_vis_confirm_delete
-let g:nerdtree_vis_confirm_copy
-let g:nerdtree_vis_confirm_move
-
-" NerdTree Highlight
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
-
-let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
-let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
-
-" NerdTree Git Plugin
-let g:NERDTreeGitStatusConcealBrackets = 1 " default: 0
-let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
-" let g:NERDTreeGitStatusIndicatorMapCustom = {
-"                \ 'Modified'  :'✹',
-"                \ 'Staged'    :'✚',
-"                \ 'Untracked' :'✭',
-"                \ 'Renamed'   :'➜',
-"                \ 'Unmerged'  :'═',
-"                \ 'Deleted'   :'✖',
-"                \ 'Dirty'     :'✗',
-"                \ 'Ignored'   :'☒',
-"                \ 'Clean'     :'✔︎',
-"                \ 'Unknown'   :'?',
-"                \ }
-
-" air-line
-let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+" incremental substitution (neovim)
+if has('nvim')
+  set inccommand=split
 endif
 
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
 
-inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+set nosc noru nosm
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+" Ignore case when searching
+set ignorecase
+
+" Finding files - Search down into subfolders
+" Be smart when using tabs ;)
+set smarttab
+" indents
+filetype plugin indent on
+set shiftwidth=2
+set softtabstop=2
+set ai "Auto indent
+set si "Smart indent
+"set nowrap "No Wrap lines
+set backspace=start,eol,indent
+
+" Finding files - Search down into subfolders
+set path+=**
+set wildignore+=*/node_modules/*
+
+"}}}
+
+
+" Imports "{{{
+" ---------------------------------------------------------------------
+runtime ./plug.vim
+runtime ./maps.vim
+
+"}}}
+
