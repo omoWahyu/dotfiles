@@ -4,6 +4,7 @@ endif
 
 call plug#begin()
 
+Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
@@ -15,6 +16,7 @@ if has("nvim")
   Plug 'williamboman/nvim-lsp-installer'
   Plug 'tami5/lspsaga.nvim'
   Plug 'folke/lsp-colors.nvim'
+  Plug 'L3MON4D3/LuaSnip'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/nvim-cmp'
@@ -25,6 +27,7 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-ts-autotag'
+  Plug 'kylechui/nvim-surround'
 endif
 
 " Plug 'ap/vim-css-color' " CSS Color Preview
