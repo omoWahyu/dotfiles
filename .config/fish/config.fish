@@ -23,3 +23,22 @@ set -gx PATH "$PNPM_HOME" $PATH
 # lvim
 set -gx PATH /home/hyujisf/.local/bin/ $PATH
 # lvim end
+
+if type -q tmux
+  if not set -q TMUX
+    set -g TMUX tmux new-session -d -s main
+    eval $TMUX
+    tmux attach-session -d -t main
+  end
+end
+
+set -gx COLORTERM truecolor
+
+set -gx EDITOR nvim
+
+# Prompt option
+
+set -g theme_display_node yes
+set -g theme_nerd_fonts yes
+set -g theme_display_date yes
+

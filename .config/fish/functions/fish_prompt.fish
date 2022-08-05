@@ -1,1 +1,1 @@
-/home/hyujisf/.local/share/omf/themes/sashimi/fish_prompt.fish
+/home/hyujisf/.local/share/omf/themes/pastfish/fish_prompt.fish
