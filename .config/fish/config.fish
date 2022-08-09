@@ -24,13 +24,11 @@ set -gx PATH "$PNPM_HOME" $PATH
 set -gx PATH /home/hyujisf/.local/bin/ $PATH
 # lvim end
 
-if type -q tmux
-  if not set -q TMUX
-    set -g TMUX tmux new-session -d -s main
-    eval $TMUX
-    tmux attach-session -d -t main
-  end
-end
+#if type -q tmux
+#  if status is-interactive; and not set -q TMUX
+#    tmux
+#  end
+#end
 
 set -gx COLORTERM truecolor
 
