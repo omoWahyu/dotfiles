@@ -116,6 +116,13 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# XAMPP Linux
+if type "/opt/lampp/xampp" > /dev/null;
+then
+  alias lamppStart="sudo systemctl stop apache2 mysql ; sudo /opt/lampp/xampp start"
+  alias lamppStop="sudo /opt/lampp/xampp stop ; sudo systemctl start apache2 mysql"
+fi
+
 # LVIM
 if type "/home/hyujisf/.local/bin/lvim" > /dev/null;
 then
