@@ -130,6 +130,18 @@ super + {Left,Down,Up,Right}
 
 #
 # special hotkeys
+#
+
+# Color Picker
+super + shift + c
+  xcolor -s clipboard
+
+# Screenshot
+super + shift + s
+  flameshot gui
+
+super + ctrl + s
+  flameshot launcher
 
 # multimedia
 super + alt + bracket{left,right}
