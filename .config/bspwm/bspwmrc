@@ -40,4 +40,6 @@ xrandr --output HDMI-1 --mode 1920x1080 --rate 75 above eDP-1 &
 ~/.config/polybar/launch.sh &
 nm-applet --indicator &
 
+flameshot &
+
 ~/.config/bspwm/scripts/bat_notifier.sh
