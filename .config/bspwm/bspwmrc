@@ -42,4 +42,8 @@ nm-applet --indicator &
 
 flameshot &
 
+fusuma &
+
 ~/.config/bspwm/scripts/bat_notifier.sh
+
+
