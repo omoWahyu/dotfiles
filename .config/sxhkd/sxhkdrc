@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty -o include="~/.config/kitty/kitty-themes/themes/Monokai_Soda.conf"
 
 # program launcher
 # super + @space
@@ -14,7 +14,6 @@ super + r
 		-show-icons -font "JetBrainsMono NerdFont 10"
 
 super + d
-	dmenu_run
 	dmenu_run
 
 
