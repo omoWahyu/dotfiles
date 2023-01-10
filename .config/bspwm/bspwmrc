@@ -30,9 +30,9 @@ bspc config active_border_color         "#FF7B54"
 
 #Autostart
 #wallpapers
-WP=$HOME/Pictures/Wallpapers/1021524.png
-feh --bg-scale $WP &
-# nitrogen --restore &
+# WP=$HOME/Pictures/Wallpapers/1021524.png
+# feh --bg-scale $WP &
+ nitrogen --restore &
 
 #Monitor
 xrandr --output HDMI-1 --mode 1920x1080 --rate 75 above eDP-1 &
