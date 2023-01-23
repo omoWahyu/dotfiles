@@ -4,7 +4,30 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+# bspc monitor -d I II III IV V VI VII VIII IX X
+
+
+_laptop() {
+xrandr --output eDP-1 --mode 1920x1080 --primary
+}
+
+_dualVertical(){
+xrandr --output HDMI-1 --mode 1920x1080 --rate 75 --above eDP-1
+}
+
+if [ -n "$(xrandr --query | grep 'HDMI-1 connected')" ]; then 
+
+bspc monitor HDMI-1 -d 9
+bspc monitor eDP-1 -d 0 1 2 3 4 5 6 7 8
+
+ _dualVertical
+
+else
+
+bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 0
+  _laptop
+
+fi
 
 bspc config border_width         2
 bspc config window_gap          8
@@ -28,22 +51,24 @@ bspc config focused_border_color        "#F5EA5A"
 bspc config normal_border_color         "#434242"
 bspc config active_border_color         "#FF7B54"
 
+# Monitor
+
 #Autostart
 #wallpapers
 # WP=$HOME/Pictures/Wallpapers/1021524.png
 # feh --bg-scale $WP &
  nitrogen --restore &
 
-#Monitor
-xrandr --output HDMI-1 --mode 1920x1080 --rate 75 above eDP-1 &
-
-~/.config/polybar/launch.sh &
-nm-applet --indicator &
-
 flameshot &
 
 fusuma &
 
 picom &
-~/.config/bspwm/scripts/bat_notifier.sh
 
+/usr/bin/dunst &
+
+~/.config/polybar/launch.sh &
+nm-applet --indicator &
+
+# Low battery notifier
+~/.config/bspwm/scripts/low_bat_notifier.sh

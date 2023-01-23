@@ -1,7 +1,8 @@
 swipe:
- 3:
+
+ 4:
    left:
-     command: "xdotool key super+bracketright"
-   right:
      command: "xdotool key super+bracketleft"
+   right:
+     command: "xdotool key super+bracketright"
 

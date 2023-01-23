@@ -43,5 +43,8 @@ export PATH="$PNPM_HOME:$PATH"
 # Composer
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
 # starship
 # eval "$(starship init zsh)"
+
