@@ -1,4 +1,6 @@
 if type -q exa
+    alias ls "exa --icons"
+    alias lsa "ls -a"
     alias ll "exa -l -g --icons"
     alias lla "ll -a"
 end

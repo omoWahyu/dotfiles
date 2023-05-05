@@ -1,10 +1,14 @@
 window:
+  opacity: 0.9
+  dimensions:
+    columns: 48
+    lines: 36
   padding:
     x: 10
     y: 10
 
 font:
-  size: 8
+  size: 7
   normal:
     family: JetBrainsMono NerdFont
     style: Regular

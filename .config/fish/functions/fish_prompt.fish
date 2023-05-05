@@ -1,1 +1,1 @@
-/home/hyujisf/.local/share/omf/themes/harleen/fish_prompt.fish
+/home/hyujisf/.local/share/omf/themes/boxfish/fish_prompt.fish
