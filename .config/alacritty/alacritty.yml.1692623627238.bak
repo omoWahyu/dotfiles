@@ -1,0 +1,23 @@
+window:
+  opacity: 0.9
+  dimensions:
+    columns: 48
+    lines: 36
+  padding:
+    x: 10
+    y: 10
+
+font:
+  size: 12
+  normal:
+    family: JetBrainsMono NerdFont
+    style: Regular
+  italic:
+    family: JetBrainsMono NerdFont
+    style: Italic
+  bold:
+    family: JetBrainsMono NerdFont
+    style: Bold
+  bold_italic:
+    family: JetBrainsMono NerdFont
+    style: Bold Italic

@@ -19,7 +19,9 @@ load_nvm > /dev/stderr
 
 # pnpm
 set -gx PNPM_HOME "/home/hyujisf/.local/share/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
 # pnpm end
 
 # lvim
@@ -42,3 +44,4 @@ set -g theme_display_node yes
 set -g theme_nerd_fonts yes
 set -g theme_display_date yes
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

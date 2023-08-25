@@ -1,12 +1,12 @@
 window:
-  opacity: 0.75
+  opacity: 0.9
   dimensions:
     columns: 48
     lines: 36
   padding:
     x: 10
     y: 10
-  decorations: none
+
 font:
   size: 12
   normal:
@@ -51,30 +51,35 @@ items:
         white: "#f7f7f7"
   - theme: 3024.dark
 colors:
-  name: 3024 (dark)
-  author: Chris Kempson
+  # Default colors
   primary:
-    background: "#090300"
-    foreground: "#a5a2a2"
-  cursor:
-    text: "#090300"
-    cursor: "#a5a2a2"
+    background: '#000000'
+    foreground: '#ffffff'
+  # Normal colors
   normal:
-    black: "#090300"
-    red: "#db2d20"
-    green: "#01a252"
-    yellow: "#fded02"
-    blue: "#01a0e4"
-    magenta: "#a16a94"
-    cyan: "#b5e4f4"
-    white: "#a5a2a2"
+    black: '#000000'
+    red: '#cd0000'
+    green: '#00cd00'
+    yellow: '#cdcd00'
+    blue: '#0000ee'
+    magenta: '#cd00cd'
+    cyan: '#00cdcd'
+    white: '#e5e5e5'
+
+  # Bright colors
   bright:
-    black: "#5c5855"
-    red: "#db2d20"
-    green: "#01a252"
-    yellow: "#fded02"
-    blue: "#01a0e4"
-    magenta: "#a16a94"
-    cyan: "#b5e4f4"
-    white: "#f7f7f7"
-theme: 3024.dark
+    black: '#7f7f7f'
+    red: '#ff0000'
+    green: '#00ff00'
+    yellow: '#ffff00'
+    blue: '#5c5cff'
+    magenta: '#ff00ff'
+    cyan: '#00ffff'
+    white: '#ffffff'
+theme: XTerm
+e: "#4C4742"
+theme: Yousai
+  - { index: 16, color: '0xd18616' }
+    - { index: 17, color: '0xf14c4c' }
+theme: github_dark
+default

@@ -1,5 +1,5 @@
 window:
-  opacity: 0.75
+  opacity: 0.9
   dimensions:
     columns: 48
     lines: 36
@@ -51,30 +51,30 @@ items:
         white: "#f7f7f7"
   - theme: 3024.dark
 colors:
-  name: 3024 (dark)
-  author: Chris Kempson
+  # Default colors
   primary:
-    background: "#090300"
-    foreground: "#a5a2a2"
-  cursor:
-    text: "#090300"
-    cursor: "#a5a2a2"
+    background: '#333333'
+    foreground: '#F2F2F2'
+
+  # Normal colors
   normal:
-    black: "#090300"
-    red: "#db2d20"
-    green: "#01a252"
-    yellow: "#fded02"
-    blue: "#01a0e4"
-    magenta: "#a16a94"
-    cyan: "#b5e4f4"
-    white: "#a5a2a2"
+    black: '#333333'
+    red: '#CC0000'
+    green: '#4E9A06'
+    yellow: '#C4A000'
+    blue: '#3465A4'
+    magenta: '#75507B'
+    cyan: '#06989A'
+    white: '#D3D7CF'
+
+  # Bright colors
   bright:
-    black: "#5c5855"
-    red: "#db2d20"
-    green: "#01a252"
-    yellow: "#fded02"
-    blue: "#01a0e4"
-    magenta: "#a16a94"
-    cyan: "#b5e4f4"
-    white: "#f7f7f7"
-theme: 3024.dark
+    black: '#88807C'
+    red: '#F15D22'
+    green: '#73C48F'
+    yellow: '#FFCE51'
+    blue: '#48B9C7'
+    magenta: '#AD7FA8'
+    cyan: '#34E2E2'
+    white: '#EEEEEC'
+theme: Pop!-OS
