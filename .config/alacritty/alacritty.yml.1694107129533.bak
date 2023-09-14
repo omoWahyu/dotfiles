@@ -51,30 +51,30 @@ items:
         white: "#f7f7f7"
   - theme: 3024.dark
 colors:
-  # Default colors
+  name: X::Erosion
+  author: earsplit
   primary:
-    background: '#0A0E14'
-    foreground: '#B3B1AD'
-
-  # Normal colors
+    background: "#181512"
+    foreground: "#BEA492"
+  cursor:
+    text: "#181512"
+    cursor: "#BEA492"
   normal:
-    black: '#01060E'
-    red: '#EA6C73'
-    green: '#91B362'
-    yellow: '#F9AF4F'
-    blue: '#53BDFA'
-    magenta: '#FAE994'
-    cyan: '#90E1C6'
-    white: '#C7C7C7'
-
-  # Bright colors
+    black: "#332D29"
+    red: "#8C644C"
+    green: "#746C48"
+    yellow: "#908A66"
+    blue: "#646A6D"
+    magenta: "#605655"
+    cyan: "#4B5C5E"
+    white: "#504339"
   bright:
-    black: '#686868'
-    red: '#F07178'
-    green: '#C2D94C'
-    yellow: '#FFB454'
-    blue: '#59C2FF'
-    magenta: '#FFEE99'
-    cyan: '#95E6CB'
-    white: '#FFFFFF'
-theme: Ayu-Dark
+    black: "#817267"
+    red: "#9F7155"
+    green: "#857B52"
+    yellow: "#9C956E"
+    blue: "#71777A"
+    magenta: "#656565"
+    cyan: "#556D70"
+    white: "#9A875F"
+theme: X-erosion
