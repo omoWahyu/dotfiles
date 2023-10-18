@@ -1,0 +1,15 @@
+#!/bin/sh
+# Times the screen off and puts it to background
+# swayidle -w timeout 5 'swaylock -f' timeout 10 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+swayidle -w \ timeout 5 'swaylock -f' \ timeout 10 'hyprctl dispatch dpms off' \ resume 'hyprctl dispatch dpms on'
+
+# kill %%
+# timeout 5 'swaylock -f'
+# timeout 10 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+# before-sleep 'swaylock -f'
+# swayidle \
+#     timeout  300 'swaymsg "output * power off"' \
+#     resume 'swaymsg "output * power on"' &
+# Locks the screen immediately
+# swaylock
+# Kills last background task so idle timer doesn't keep running

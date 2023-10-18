@@ -257,7 +257,7 @@ Copy this file to ~/.config/tofi/config and get customising!
   # algorithm.
   #
   # Supported values: normal, prefix, fuzzy
-  matching-algorithm = normal
+  matching-algorithm = fuzzy
 
   # If true, require a match to allow a selection to be made. If false,
   # making a selection with no matches will print input to stdout.
