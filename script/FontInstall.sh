@@ -4,8 +4,8 @@ nf_link="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1"
 
 declare -a nf_list=("JetBrainsMono" "FiraCode" "FantasqueSansMono" "CaskaydiaCode" "Agave" "D2Coding" "Hack" "Iosevka" "IosevkaTerm" "IosevkaTermSlab" "Lilex" "Noto" "ProggyClean" "RobotoMono" "SpaceMono" "Symbols" "Terminess" "VictorMono" "Ubuntu" "UbuntuMono")
 
-checkmark="\033[0;32m\xE2\x9C\x94\033[0m"
-
+checkMark="\033[0;32m\xE2\x9C\x94\033[0m"
+crossMark="\033[0;31m\xE2\x9D\x8C\033[0m"
 installing_fonts(){
 	clear 
 	echo "Prepare for installing Fonts"
@@ -26,24 +26,33 @@ installing_fonts(){
 			clear
 		else 
 			echo -e "\n- Checking $i font"
-			sleep 1
-			echo -e "\r$checkmark $i already Cached"
-			sleep 2
+			sleep 0.3
+			echo -e "\r$checkMark $i already Cached"
+			sleep 1.2
 		fi
 
-			echo -e "\r$checkmark $i Success Cached"
+			echo -e "\r$checkMark $i Success Cached"
+			sleep 1.2
 		clear
 	done
 
+	echo -e "Moving font from cache to '$nf'"
 	if [ ! -d "$nf" ]; then
 		sudo mkdir $nf
 	fi
 	sudo mv -f $tnf $nf
+	sleep 1.2
 
+	fc-cache -v /usr/share/fonts
+	sleep 0.5
+	clear
+
+	echo "Installed Font :"
+	echo -e "========================\n"
 	for i in "${nf_list[@]}"
 	do
-		echo -e "\r $checkmark $i Installed"
-		sleep 0.3
+		echo -e "\r - $checkMark $i Installed"
+		sleep 0.2
 	done
 }
 
@@ -68,7 +77,7 @@ else
 		;;
 		*)
 		echo -ne "\n"
-		echo \n canceled
+		echo \n $crossMark canceled
 		;;
 	esac
 fi
