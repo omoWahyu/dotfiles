@@ -1,12 +1,9 @@
 window:
-  opacity: 0.70
-  dimensions:
-    columns: 56
-    lines: 36
+  opacity: 0.85
   padding:
     x: 10
     y: 10
-  decorations: none
+      #decorations: none
 font:
   size: 12
   normal:
