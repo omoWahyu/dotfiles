@@ -19,7 +19,7 @@ installing_fonts(){
 	for i in "${nf_list[@]}"
 	do
 	clear 
-		echo -e "Installing $i fonts"
+		echo -e "Downloading $i fonts from Nerd Fonts Databases"
 		if [ ! -d "$tnf/$i" ]; then
 			curl --progress-bar -P $tnf -OL $nf_link/$i.zip --progress-bar
 			unzip $tnf/$i.zip -d $i
